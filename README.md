@@ -3,7 +3,7 @@
 ## 项目资源文件夹的结构
 1.CShar：C#脚本
 
-2.Image：的图片/视频类资源
+2.Image：图片/视频类资源
 
 3.Prefabrication：预制体
 
