@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class bullets : MonoBehaviour
 {
-    public float speed=1f;
+    public float speed=10f;
     int x, y;
     Vector3 direction;
-    // Start is called before the first frame update
+    public float damage = 500f;
     void Start()
     {
         x = -1;
