@@ -38,13 +38,10 @@ public class PlayController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown("d"))
         {
-            if (isGround)
-            {
-                Vector2 jumpvel = new Vector2(0.0f, jumpSpeed);
-                myRigidbody.velocity = Vector2.up * jumpvel;
-            }
+            Vector2 jumpvel = new Vector2(0.0f, jumpSpeed);
+            myRigidbody.velocity = Vector2.up * jumpvel;
         }
     }
 }
