@@ -16,6 +16,8 @@ public class Movement : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float r = Input.GetAxis("Vertical");
 
-        transform.Translate(new Vector3(h, r, 0));
+        transform.Translate(new Vector3(h/5, r/5, 0));
     }
+
+    
 }
