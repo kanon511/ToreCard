@@ -6,11 +6,11 @@ public class Entity : MonoBehaviour
 {
     public float hitpoint = 10;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    /*void OnCollisionEnter2D(Collision2D collision)
     {
-        bullets bullet = collision.gameObject.GetComponent<bullets>();
-        hitpoint -= bullet.damage;
-    }
+            bullets bullet = collision.gameObject.GetComponent<bullets>();
+            hitpoint -= bullet.damage;
+    }*/
     protected void Die()
     {
         if (hitpoint <= 0)
@@ -18,9 +18,13 @@ public class Entity : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void TakeDamage(float damage)
+    {
+        hitpoint -= damage;
+        print("damaged taken.");
+    }
 
-
-    // Start is called before the first frame update
+        // Start is called before the first frame update
     void Start()
     {
         
@@ -29,6 +33,6 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Die();
+
     }
 }
