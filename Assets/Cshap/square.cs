@@ -17,7 +17,7 @@ public class square : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject.Instantiate(squareprefab, squares, transform.rotation);
+            Instantiate(squareprefab, squares, transform.rotation);
         }
     }
 }
