@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullets : MonoBehaviour
+public class Bullets : MonoBehaviour
 {
     private Rigidbody2D myRigidbody;
     public float speed=10f;
@@ -12,7 +12,7 @@ public class bullets : MonoBehaviour
      
     
 
-    void OnCollisionEnter2D(Collision2D collision)
+     void OnTriggerEnter2D(Collider2D collision)
     {
         Entity entity = collision.gameObject.GetComponent<Entity>();
         entity.TakeDamage(damage);

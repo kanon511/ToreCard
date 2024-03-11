@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
+    public float maxHitPoint = 20;
     public float hitPoint = 10;
     protected LinkedList<Buff> buffList = new LinkedList<Buff>();
     protected LinkedList<Talent> talentList = new LinkedList<Talent>();
-    
+    protected LinkedList<Buff> toBeRemoved = new LinkedList<Buff>();
+
     protected void Die()
     {
         if (hitPoint <= 0)
@@ -22,15 +24,23 @@ public class Entity : MonoBehaviour
     }
     public void ActiveBuff()
     {
+    
         foreach (Buff i in buffList)
         {
             i.Active();
             i.Disappear();
             if (i.lasted == false)
             {
-                buffList.Remove(i);
+                toBeRemoved.AddLast(i);
             }
         }
+
+
+        foreach (Buff i in toBeRemoved)
+        {
+            buffList.Remove(i);
+        }
+
     }
 
         // Start is called before the first frame update
