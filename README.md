@@ -5,7 +5,7 @@
 
 2.Image：图片/视频类资源
 
-3.Prefabrication：预制体
+3.Prefab：预制体
 
 4.Scenes：场景
 
