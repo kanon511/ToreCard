@@ -6,9 +6,9 @@ namespace Game
 {
     public enum Area
     {
-        Primary,
-        Secondary,
-        Bag,
+        Primary,//使用卡牌
+        Secondary,//备使用卡牌
+        Bag,//背包物品
     }
     public class Bag : MonoBehaviour
     {
