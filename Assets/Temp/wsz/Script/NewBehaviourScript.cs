@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class RotateBehavior : MonoBehaviour
 {
     public float RotateSpeed = 50f;
     public float DestoryTime = 50f;
@@ -15,6 +15,6 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up*Time.deltaTime*RotateSpeed,Space.World);
+        transform.Rotate(Vector2.up*Time.deltaTime*RotateSpeed,Space.World);
     }
 }
