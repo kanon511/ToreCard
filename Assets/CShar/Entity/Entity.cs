@@ -20,7 +20,18 @@ public class Entity : MonoBehaviour
     public void TakeDamage(float damage)
     {
         hitPoint -= damage;
-        print("damaged taken.");
+    }
+
+    public void Regenerate(float healingAmont)
+    {
+        if (hitPoint < maxHitPoint) 
+        {
+            hitPoint += healingAmont;
+        }
+        else 
+        {
+            hitPoint = maxHitPoint; 
+        }
     }
     public void ActiveBuff()
     {

@@ -21,6 +21,8 @@ public class Player : Entity
         rigidbody = GetComponent<Rigidbody2D>();
         Buff buff = new Burning(this);
         buffList.AddLast(buff);
+        Buff buff1 = new Regeneration(this);
+        buffList.AddLast(buff1);
     }
 
     
