@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public GameObject bulletprefab;
     public Rigidbody2D bullets;
     public float speed = 5.0f;
     public float bulletWallDamage = 10f;     //¶ÔÇ½µÄ×Óµ¯ÉËº¦
