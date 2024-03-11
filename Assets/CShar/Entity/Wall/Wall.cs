@@ -9,7 +9,7 @@ public class Wall : Entity
         Bullet bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet != null)
         {
-            TakeDamage(bullet.bulletWallDamage);
+            bullet.AttackEntity(this);
         }
     }
     // Start is called before the first frame update
