@@ -29,10 +29,8 @@ public class Bullet : MonoBehaviour
         Instantiate(bullet, position, Quaternion.Euler(0, 0, direction));
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void AttackEntity(Entity entity)
     {
-        Entity entity = collision.gameObject.GetComponent<Entity>();
-
         if(entity != null)
          {
              if(entity is Wall)
