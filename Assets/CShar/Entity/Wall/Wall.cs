@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Wall : Entity
 {
-        // Start is called before the first frame update
-        void Start()
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            TakeDamage(bullet.bulletWallDamage);
+        }
+    }
+    // Start is called before the first frame update
+    void Start()
     {   
         hitPoint = 500;
     }
