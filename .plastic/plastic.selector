@@ -1,0 +1,4 @@
+repository "ToreCard@hanppiness@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
