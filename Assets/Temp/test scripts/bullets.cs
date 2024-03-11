@@ -9,7 +9,7 @@ public class bullets : MonoBehaviour
     int x, y;
     Vector3 direction;
     public float damage = 500f;
-   
+     
     
 
     void OnCollisionEnter2D(Collision2D collision)

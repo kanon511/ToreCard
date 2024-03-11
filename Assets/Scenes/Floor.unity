@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitpoint: 10
-  spped: 8
+  speed: 8
 --- !u!212 &1398577226
 SpriteRenderer:
   m_ObjectHideFlags: 0

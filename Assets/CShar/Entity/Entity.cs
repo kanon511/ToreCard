@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-    public float hitpoint = 10;
-
-    /*void OnCollisionEnter2D(Collision2D collision)
-    {
-            bullets bullet = collision.gameObject.GetComponent<bullets>();
-            hitpoint -= bullet.damage;
-    }*/
+    public float hitPoint = 10;
+    protected LinkedList<Buff> buffList = new LinkedList<Buff>();
+    protected LinkedList<Talent> talentList = new LinkedList<Talent>();
+    
     protected void Die()
     {
-        if (hitpoint <= 0)
+        if (hitPoint <= 0)
         {
             Destroy(gameObject);
         }
     }
     public void TakeDamage(float damage)
     {
-        hitpoint -= damage;
+        hitPoint -= damage;
         print("damaged taken.");
+    }
+    public void ActiveBuff()
+    {
+        foreach (Buff i in buffList)
+        {
+            i.Active();
+            i.Disappear();
+            if (i.lasted == false)
+            {
+                buffList.Remove(i);
+            }
+        }
     }
 
         // Start is called before the first frame update
@@ -33,6 +42,6 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

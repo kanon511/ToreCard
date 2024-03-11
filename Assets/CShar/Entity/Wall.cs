@@ -7,12 +7,13 @@ public class Wall : Entity
         // Start is called before the first frame update
         void Start()
     {   
-        hitpoint = 500;
+        hitPoint = 500;
     }
 
     // Update is called once per frame
     void Update()
     {
+        ActiveBuff();
         Die();
     }
 }
