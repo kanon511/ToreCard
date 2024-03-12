@@ -28,6 +28,7 @@ public class SpawnItem : MonoBehaviour
             Instantiate(Item, a + b, Quaternion.identity);
             n--;
         }
+        Destroy(gameObject);
             
     }
 
