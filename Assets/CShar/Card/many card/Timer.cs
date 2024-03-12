@@ -18,12 +18,12 @@ public class Timer
         
     }
 
-    public void Shoot(Entity entity, float fireAngle)
+    public void Shoot(Entity entity, Vector3 vector)
     {
         if (Time.time > nextFire)  // 让子弹有时间间隔
         {
             nextFire = Time.time + fireRate;  // 游戏开发时间到现在的时间加上射击的间隔
-            Bullet.SummonBullet(entity, 0, entity.transform.position, fireAngle);
+            Bullet.SummonBullet(entity, 0, entity.transform.position, vector);
         }
     }
 }

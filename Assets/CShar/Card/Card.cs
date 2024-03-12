@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Card
 {
-    public Entity entity1;
     public Timer timer;
     public Card()
     {
@@ -23,9 +22,9 @@ public class Card
         
     }
 
-    public void Shoot(Entity entity, float fireAngle)
+    public void Shoot(Entity entity, Vector3 vector)
     {
-        timer.Shoot(entity, fireAngle);
+        timer.Shoot(entity, vector);
     }
 
     public void UseCard(Entity entity, Vector3 position)
@@ -33,14 +32,9 @@ public class Card
         Vector3 ms = position;  //鼠标点击的位置
         ms = Camera.main.ScreenToWorldPoint(ms);
         Vector3 es = entity.transform.position; //实体所在的位置
-        float fireAngle;
-        Vector2 targeDir = ms - es;  //实体与鼠标点击位置的向量
-        fireAngle = Vector2.Angle(targeDir, Vector3.up);
-        if( ms.x > es.x)
-        {
-            fireAngle = -fireAngle;
-        }
-        timer.Shoot(entity, fireAngle);
+        Vector3 targeDir = ms - es;  //实体与鼠标点击位置的向量
+        targeDir = Camera.main.WorldToScreenPoint(targeDir);
         Vector3 vector3 = targeDir.normalized;
+        timer.Shoot(entity, vector3);
     }
 }
