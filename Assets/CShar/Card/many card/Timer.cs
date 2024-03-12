@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class Timer
 {
     // Start is called before the first frame update
     public float fireRate = 0.5f; // 子弹的射击间隔
@@ -18,15 +18,12 @@ public class Timer : MonoBehaviour
 
     }
 
-    public void Shoot(GameObject player)
+    public void Shoot(Entity entity, float fireAngle)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Time.time > nextFire)  // 让子弹有时间间隔
         {
-            if (Time.time > nextFire)  // 让子弹有时间间隔
-            {
-                nextFire = Time.time + fireRate;  // 游戏开发时间到现在的时间加上射击的间隔
-                Bullet.SummonBullet(0, player.transform.position, player.transform.rotation.z);
-            }
+            nextFire = Time.time + fireRate;  // 游戏开发时间到现在的时间加上射击的间隔
+            Bullet.SummonBullet(entity, 0, entity.transform.position, fireAngle);
         }
     }
 }
