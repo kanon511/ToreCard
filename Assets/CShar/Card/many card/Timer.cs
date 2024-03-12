@@ -5,7 +5,6 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject player;
     public float fireRate = 0.5f; // ×Óµ¯µÄÉä»÷¼ä¸ô
     public float nextFire = 0.0f;
     void Start()
@@ -16,10 +15,10 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Shoot();
+
     }
 
-    public void Shoot()
+    public void Shoot(GameObject player)
     {
         if (Input.GetMouseButtonDown(0))
         {
