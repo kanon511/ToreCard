@@ -15,7 +15,7 @@ public class Timer
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void Shoot(Entity entity, float fireAngle)

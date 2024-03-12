@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Card
 {
+    public Entity entity1;
     public Timer timer;
     public Card()
     {
@@ -39,7 +40,7 @@ public class Card
         {
             fireAngle = -fireAngle;
         }
-        //timer.Shoot(entity, fireAngle);
+        timer.Shoot(entity, fireAngle);
         Vector3 vector3 = targeDir.normalized;
     }
 }
