@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnItem : MonoBehaviour
 {
-    
-    public GameObject Item;
+
+    public List<GameObject> partsLst = new List<GameObject>();
     
     // Start is called before the first frame update
     void Start()
@@ -20,8 +20,15 @@ public class SpawnItem : MonoBehaviour
     }
     public void SpawnItems(Vector2 b)
     {
-        Vector2 a =new Vector2(Random.Range(-7,-7),Random.Range(4,0));     
-        Instantiate(Item, a+b,Quaternion.identity);
+            int n = partsLst.Count;
+        while (n > 0)
+        {
+            GameObject Item = partsLst[n-1];
+            Vector2 a = Random.insideUnitCircle * 4;
+            Instantiate(Item, a + b, Quaternion.identity);
+            n--;
+        }
+            
     }
 
 }
