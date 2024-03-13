@@ -16,6 +16,10 @@ namespace Game
         BagCard[] secondaryCards = new BagCard[4];
         BagItem[] bagItems = new BagItem[24];
 
+        public Bag()
+        {
+            primaryCards[0] = new BagCard();
+        }
         public void AddBagItem()
         {
             
