@@ -561,8 +561,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2145399333}
   - component: {fileID: 2145399328}
-  - component: {fileID: 2145399330}
-  - component: {fileID: 2145399334}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -622,21 +620,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2145399330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145399327}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfa6c97b4753724ab96f4d7dc087be0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sr: {fileID: 2145399328}
-  pic:
-  - {fileID: 0}
 --- !u!224 &2145399333
 RectTransform:
   m_ObjectHideFlags: 0
@@ -657,18 +640,3 @@ RectTransform:
   m_AnchoredPosition: {x: 10.7073, y: -0.12}
   m_SizeDelta: {x: 4.9265, y: 4.5656}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2145399334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145399327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59cac3788016e1c42b04ca001c772710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 787e185cd8c4b0142af02683cb5ce003, type: 3}
-  sr: {fileID: 2145399328}
-  entity1: {fileID: 652231262}
