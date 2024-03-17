@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer
+public class ShootTime : Card
 {
     // Start is called before the first frame update
     public float fireRate = 0.5f; // ×Óµ¯µÄÉä»÷¼ä¸ô
@@ -16,6 +16,11 @@ public class Timer
     void Update()
     {
         
+    }
+
+    public void ShootTimePhoto(string name)
+    {
+        sprite = Resources.Load<Sprite>(name) as Sprite;
     }
 
     public void Shoot(Entity entity, Vector3 vector)

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class Card
 {
-    public Timer timer;
+    public Sprite sprite;
+    public SpriteRenderer sr;
+    public ShootTime shootTime;
     public Card()
     {
-        timer = new Timer();
+        shootTime = new ShootTime();
     }
 
     // Start is called before the first frame update
@@ -19,12 +22,7 @@ public class Card
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    public void Shoot(Entity entity, Vector3 vector)
-    {
-        timer.Shoot(entity, vector);
     }
 
     public void UseCard(Entity entity, Vector3 position)
@@ -35,6 +33,6 @@ public class Card
         Vector3 targeDir = ms - es;  //实体与鼠标点击位置的向量
         targeDir = Camera.main.WorldToScreenPoint(targeDir);
         Vector3 vector3 = targeDir.normalized;
-        timer.Shoot(entity, vector3);
+        shootTime.Shoot(entity, vector3);
     }
 }
